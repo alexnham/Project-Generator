@@ -1,1 +1,1 @@
-export const APIKEY = "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";
+export const APIKEY = "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";
