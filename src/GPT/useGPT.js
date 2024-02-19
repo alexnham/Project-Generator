@@ -1,9 +1,7 @@
 import OpenAI from "openai";
-import { APIKEY } from "./config.js";
-let idea;
 const apiKey = APIKEY
 const openai = new OpenAI({
-    apiKey: apiKey, dangerouslyAllowBrowser: true 
+    apiKey: process.env.APIKEY, dangerouslyAllowBrowser: true 
 });
 
 export const runPrompt = async (difficulty) => {
