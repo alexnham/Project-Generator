@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/projainspire/static/css/main.b4d9bc5e.css",
-    "main.js": "/projainspire/static/js/main.9332a7fc.js",
+    "main.js": "/projainspire/static/js/main.d7a726ec.js",
     "static/media/background.gif": "/projainspire/static/media/background.5d850951310c0548bfcf.gif",
     "index.html": "/projainspire/index.html",
     "main.b4d9bc5e.css.map": "/projainspire/static/css/main.b4d9bc5e.css.map",
-    "main.9332a7fc.js.map": "/projainspire/static/js/main.9332a7fc.js.map"
+    "main.d7a726ec.js.map": "/projainspire/static/js/main.d7a726ec.js.map"
   },
   "entrypoints": [
     "static/css/main.b4d9bc5e.css",
-    "static/js/main.9332a7fc.js"
+    "static/js/main.d7a726ec.js"
   ]
 }
