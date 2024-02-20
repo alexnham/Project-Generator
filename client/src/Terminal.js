@@ -11,7 +11,7 @@ const Terminal = () => {
         setLoading(false)
         console.log(difficulty)
 
-        const response = await fetch(`/GPT/${difficulty}`, 
+        const response = await fetch(`https://projainspire-api-12121212.onrender.com/GPT/${difficulty}`, 
             {
                 method: 'GET',
                 headers: {'Content-Type': 'application/json'},
