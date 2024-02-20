@@ -1,5 +1,5 @@
 {
-  "proxy":"http://localhost:8000",
+  "proxy":"https://projainspire-api-12121212.onrender.com",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
