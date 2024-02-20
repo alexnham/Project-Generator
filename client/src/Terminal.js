@@ -40,16 +40,16 @@ const Terminal = () => {
             <p className="p-4">Difficulty: {idea.difficulty}</p>
             <p className="p-4">{idea.description}</p>
             <span className="p-4">Languages: </span>
-            {idea.languages.map((language) => (
+            {idea.languages?.map((language) => (
                 <span className="p-4">{language}</span>))}  
             <br/>
             <span className="p-4">Frameworks: </span> 
-            {idea.frameworks.map((framework) => (
+            {idea.frameworks?.map((framework) => (
                 <span className="p-4">{framework}</span>                
             ))} 
             <br/>
             <span className="p-4">Features: </span>
-            {idea.features.map((feature) => (
+            {idea.features?.map((feature) => (
                     <span className="p-4">{feature}</span> ))}
             </div>}
             {loading && 
