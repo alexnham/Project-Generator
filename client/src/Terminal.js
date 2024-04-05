@@ -2,13 +2,13 @@ import { useState } from "react";
 
 const Terminal = () => {
     const [idea, setIdea] = useState(null)
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [difficulty, setDifficulty] = useState("Easy")
 
 
     const createIdea = async () => {
         setIdea(null)
-        setLoading(false)
+        setLoading(true)
         console.log(difficulty)
 
         const response = await fetch(`https://projainspire-api-12121212.onrender.com/GPT/${difficulty}`, 
@@ -17,22 +17,20 @@ const Terminal = () => {
                 headers: {'Content-Type': 'application/json'},
             })
             const json = await response.json()
-
                 try {
                 setIdea(JSON.parse(json))
-                setLoading(true)
-                setDifficulty("Easy")
-        
+                setLoading(false)    
+                setDifficulty('Easy')    
                 } catch(e){
                     setLoading(false)
-                    setIdea(e)
+                    setIdea({'project':'error, please try again'})
                 }
             
     }
 
     return ( 
         <div className="p-10 relative w-5/6 h-5/6 bg-neutral-900 rounded-3xl  border-neutral-900 border-t-8 text-white">
-            {!loading && <div>Loading...</div>}
+            {loading && <div>Loading...</div>}
             {idea && 
             
             <div>
@@ -52,7 +50,7 @@ const Terminal = () => {
             {idea.features?.map((feature) => (
                     <span className="p-4">{feature}</span> ))}
             </div>}
-            {loading && 
+            {!loading && 
                 <div>
                 <select className="absolute  bg-neutral-900 text-3xl bottom-0 pl-96 w-4/4"  onChange={(e) => setDifficulty(e.target.value)}>
                     <option value="Easy">Easy</option>
